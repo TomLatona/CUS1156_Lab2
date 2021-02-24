@@ -9,14 +9,15 @@ public class UniqueWords
    */
    public static int countUnique(ArrayList<String> list)
    {
-	  int count = 0;
 	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
-      }
+	  ArrayList<String> counter = new ArrayList<String>();
+	  for(String x : list) {
+		  if(!counter.contains(x)) {
+			  counter.add(x);
+		  }
+	  }
+	  
+	  int count = counter.size();
 	  return count;
    }
 
